@@ -11,14 +11,14 @@
     box-sizing: border-box;
   }
   
-  body {
+body {
     font-family: Itim;
     background-color: #2c2c2c; /* Couleur de fond principale */
     color: #ffffff; /* Couleur du texte par défaut */
   }
   
   /* Container principal pour le formulaire de connexion */
-  .login-container {
+.login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,13 +30,13 @@
   }
   
   /* Logo ou image */
-  .login-container img {
+.login-container img {
     width: 200px;
     margin-bottom: 1.5rem;
   }
   
   /* Titre de la section */
-  .login-container h2 {
+.login-container h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -44,14 +44,14 @@
   }
   
   /* Formulaire */
-  .login-form {
+.login-form {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
   
   /* Groupes de champs (label + input) */
-  .form-group {
+.form-group {
     margin-bottom: 1.5rem;
   }
   
@@ -111,4 +111,42 @@
   .login-btn:hover {
     background-color: #e08888;
   }
+  
+  a{
+    text-decoration: none;
+  }
+  
+/* Section "hero" */
+.hero {
+    min-height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Logo */
+  .hero img {
+    max-width: 500px;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ff9e7a;
+    color: #2c2c2c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e08888;
+  }
+
   

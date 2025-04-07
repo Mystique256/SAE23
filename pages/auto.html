@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Blablatac Covoiturage - Votre voiture</title>
+  <!-- Import de la police Itim depuis Google Fonts (optionnel si déjà importé ailleurs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="car-info-container">
+    <!-- Logo -->
+    <img src="../assets/img/tac_sansbg.png" alt="Blablatac Covoiturage Logo" class="logo">
+
+    <!-- Titre principal -->
+    <h2>À propos de votre voiture</h2>
+
+    <!-- Formulaire avec lignes de texte et sélecteurs -->
+    <form action="action_page.php" method="post" class="car-info-form">
+      <div class="form-line">
+        <span class="inline-text">Elle a</span>
+        <select id="places" name="places" required>
+          <option value="" disabled selected></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <span class="inline-text">places</span>
+      </div>
+      <div class="form-line">
+        <span class="inline-text">
+          Le contrôle technique est valide et l'assurance aussi ?
+        </span>
+        <select id="validite" name="validite" required>
+          <option value="" disabled selected></option>
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+      </div>
+      <div class="form-line">
+        <span class="inline-text">Type de la voiture</span>
+        <select id="type" name="type" required>
+          <option value="" disabled selected></option>
+          <option value="citadine">Citadine</option>
+          <option value="berline">Berline</option>
+          <option value="break">Break</option>
+          <option value="suv">SUV</option>
+          <option value="monospace">Monospace</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">On roule !</button>
+    </form>
+  </div>
+</body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style global */
+body {
+  background-color: #2c2c2c;          /* Fond sombre */
+  font-family: 'Itim', cursive;      /* Police Google Fonts */
+  color: #ffffff;                    /* Couleur du texte */
+}
+
+/* Conteneur principal */
+.car-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  max-width: 220px;
+  margin-bottom: 1.5rem;
+}
+
+/* Titre */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* Formulaire */
+.car-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espace vertical entre les lignes */
+  width: 100%;
+}
+
+/* Chaque ligne (texte + select) */
+.form-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;    /* Permet un retour à la ligne si l’écran est étroit */
+  gap: 0.5rem;        /* Espace horizontal entre éléments */
+  font-size: 1.2rem;  /* Taille du texte */
+}
+
+/* Petits morceaux de texte sur la même ligne */
+.inline-text {
+  white-space: nowrap; /* Pour éviter les retours à la ligne au milieu */
+}
+
+/* Sélecteurs (listes déroulantes) */
+.form-line select {
+  border: none;
+  border-radius: 5px;
+  background-color: #3d3d3d;   /* Fond gris */
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* Barre colorée en bas */
+  border-bottom: 5px solid #f1a6a6;
+
+  /* Supprime la flèche native */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Retire la flèche sur IE/Edge */
+.form-line select::-ms-expand {
+  display: none;
+}
+
+/* Bouton de validation */
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1a6a6; /* Couleur du bouton */
+  color: #2c2c2c;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #e08888;
+}
+
+</style>
+</html>
