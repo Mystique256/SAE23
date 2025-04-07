@@ -29,66 +29,7 @@
       <button class="search-button">GO!</button>
     </div>
     <section class="trip-list">
-      <article class="trip-card">
-        <div class="trip-card-header">
-          <span class="trip-destination">FCSM</span>
-          <button class="join-btn">Rejoindre</button>
-        </div>
-        <div class="trip-card-body">
-          <p>19:30<br>07/04/2025<br>départ depuis l'IUT</p>
-        </div>
-        <div class="trip-card-footer">
-          <p>6 places dispo | 15€ | IUT - Parking P20</p>
-        </div>
-      </article>
-      <article class="trip-card">
-        <div class="trip-card-header">
-          <span class="trip-destination">FCSM</span>
-          <button class="join-btn">Rejoindre</button>
-        </div>
-        <div class="trip-card-body">
-          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
-        </div>
-        <div class="trip-card-footer">
-          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
-        </div>
-      </article>
-      <article class="trip-card">
-        <div class="trip-card-header">
-          <span class="trip-destination">FCSM</span>
-          <button class="join-btn">Rejoindre</button>
-        </div>
-        <div class="trip-card-body">
-          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
-        </div>
-        <div class="trip-card-footer">
-          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
-        </div>
-      </article>
-      <article class="trip-card">
-        <div class="trip-card-header">
-          <span class="trip-destination">FCSM</span>
-          <button class="join-btn">Rejoindre</button>
-        </div>
-        <div class="trip-card-body">
-          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
-        </div>
-        <div class="trip-card-footer">
-          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
-        </div>
-      </article>
-      <article class="trip-card">
-        <div class="trip-card-header">
-          <span class="trip-destination">FCSM</span>
-          <button class="join-btn">Rejoindre</button>
-        </div>
-        <div class="trip-card-body">
-          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
-        </div>
-        <div class="trip-card-footer">
-          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
-        </div>
-      </article> 
+      <?php include 'A_Event.php' ?> <!-- Inclusion du fichier A_Event.php -->
     </section>
   </main>
 </body>
