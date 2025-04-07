@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Blablatac Covoiturage - Inscription</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="login-container">
+    <!-- Logo / Titre principal -->
+    <a href="header.html"><img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac"></a>
     
+    <!-- Titre de la section -->
+    <h2>On se crée un compte ?</h2>
+
+    <!-- Formulaire d'inscription -->
+    <form action="action_page.php" method="post" class="login-form" id="signupForm">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Entrez votre e-mail" 
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Nom</label>
+        <input 
+          type="text" 
+          id="lastname" 
+          name="lastname" 
+          placeholder="Entrez votre nom" 
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">Prénom</label>
+        <input 
+          type="text" 
+          id="firstname" 
+          name="firstname" 
+          placeholder="Entrez votre prénom" 
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Entrez votre mot de passe" 
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm_password">Confirmation du mot de passe</label>
+        <input 
+          type="password" 
+          id="confirm_password" 
+          name="confirm_password" 
+          placeholder="Confirmez votre mot de passe" 
+          required
+        />
+      </div>
+
+      <!-- Message d'erreur affiché si les mots de passe ne correspondent pas -->
+      <div id="error-message" style="color: red; display: none;">
+        Les mots de passe ne correspondent pas.
+      </div>
+
+      <div class="links">
+        <a href="login.html">Vous avez déjà un compte ?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Ça roule !</button>
+    </form>
+  </div>
+
+  <!-- Script JavaScript pour la validation -->
+  <script>
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', function(e) {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm_password').value;
+      const errorMessage = document.getElementById('error-message');
+      
+      if (password !== confirmPassword) {
+        e.preventDefault(); // Empêche l'envoi du formulaire
+        errorMessage.style.display = 'block';
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
