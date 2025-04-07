@@ -1,19 +1,22 @@
-<?php 
-require('C_config.php');
+<?php
+require_once 'C_config.php';
 session_start();
-
-if (isset($_POST['email'])){
-    $username = stripslashes($_REQUEST['email']);
-    $username = mysqli_real_escape_string($conn, $username);
-    $_SESSION['email'] = $username;
-    $password = stripslashes($_REQUEST['password']);
-    $password = mysqli_real_escape_string($conn, $password);
-      $query = "SELECT * FROM `user` WHERE AdresseMail='$username' 
-    and password='$password'";
-    
-    $result = mysqli_query($conn,$query) or die(mysql_error());
-    echo "Hello World" ;
+if(isset($_POST['submit'])) {
+  if(!empty($_POST['email']) AND !empty($_POST['password'])) {
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
+    $info = $conn ->prepare("SELECT COUNT(*) FROM user WHERE `AdresseMail` = ?  AND `Password` = ?");
+    $info->execute(array($email,$password));
+    if($info > 0) {
+      $_SESSION['email'] = $email;
+      $_SESSION['password'] = $password;
+      header("Location: ../pages/auto.php");
+      echo "Vous êtes connecté";
+    } else {
+      echo "Mots de passes ou Utilisateur incorrects";
+    }
+  } else {
+    echo "Veuillez remplir tous les champs";
   }
-
-
+}
 ?>

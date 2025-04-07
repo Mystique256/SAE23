@@ -1,5 +1,5 @@
 <?php
-require_once '../traitement/C_config.php';
+require_once 'C_config.php';
 
 $stmt = $conn->query("SELECT * FROM Trajet ORDER BY date, time");
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Blablatac - Accueil</title>
-
+  <script src="JS_Search.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -25,11 +25,12 @@
         type="text" 
         placeholder="Ex : l'IUT, la gare..." 
         class="search-input"
+        name="search"
       />
       <button class="search-button">GO!</button>
-    </div>
+      </div>
     <section class="trip-list">
-      <?php include 'A_Event.php' ?> <!-- Inclusion du fichier A_Event.php -->
+      <?php include '../traitement/A_Event.php' ?> <!-- Inclusion du fichier A_Event.php -->
     </section>
   </main>
 </body>

@@ -42,7 +42,7 @@
         <a href="#">Mot de passe oublié ?</a>
         <a href="register.html">Pas encore de compte ?</a>
       </div>
-      <button type="submit" class="login-btn">On roule !</button>
+      <button type="submit" name="submit" class="login-btn">On roule !</button>
     </form>
   </div>
 </body>

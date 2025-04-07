@@ -11,7 +11,7 @@ $add = "default" ;
 
 if ($password != $confirm_password) {
     echo "Les mots de passe ne correspondent pas";
-    header('Location: ../pages/login.html');
+    header('Location: ../pages/login.php');
     exit; // Add exit to prevent further execution
 } else {
     $sql = "INSERT INTO user (nom, AdresseMail, password, Adresse) VALUES ('$nom', '$email', '$password', '$add' )";
