@@ -6,10 +6,13 @@ if(isset($_POST['submit'])) {
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
     $info = $conn ->prepare("SELECT COUNT(*) FROM user WHERE `AdresseMail` = ?  AND `Password` = ?");
+    $infoS = $conn ->prepare("SELECT * FROM user WHERE `AdresseMail` = ?  AND `Password` = ?");
     $info->execute(array($email,$password));
+    $infoS->execute(array($email,$password));
     if($info > 0) {
       $_SESSION['email'] = $email;
       $_SESSION['password'] = $password;
+      $_SESSION['nom'] = $infoS->fetch()['nom'];
       header("Location: ../pages/auto.php");
       echo "Vous êtes connecté";
     } else {
