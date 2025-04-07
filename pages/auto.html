@@ -2,60 +2,95 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Blablatac Covoiturage - Votre voiture</title>
-  <!-- Import de la police Itim depuis Google Fonts (optionnel si déjà importé ailleurs) -->
+  <title>Blablatac - Accueil</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../assets/img/tac_petit_abg.png" type="image/x-icon">
 </head>
 <body>
-  <div class="car-info-container">
-    <!-- Logo -->
-    <img src="../assets/img/tac_sansbg.png" alt="Blablatac Covoiturage Logo" class="logo">
-
-    <!-- Titre principal -->
-    <h2>À propos de votre voiture</h2>
-
-    <!-- Formulaire avec lignes de texte et sélecteurs -->
-    <form action="action_page.php" method="post" class="car-info-form">
-      <div class="form-line">
-        <span class="inline-text">Elle a</span>
-        <select id="places" name="places" required>
-          <option value="" disabled selected></option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select>
-        <span class="inline-text">places</span>
-      </div>
-      <div class="form-line">
-        <span class="inline-text">
-          Le contrôle technique est valide et l'assurance aussi ?
-        </span>
-        <select id="validite" name="validite" required>
-          <option value="" disabled selected></option>
-          <option value="oui">Oui</option>
-          <option value="non">Non</option>
-        </select>
-      </div>
-      <div class="form-line">
-        <span class="inline-text">Type de la voiture</span>
-        <select id="type" name="type" required>
-          <option value="" disabled selected></option>
-          <option value="citadine">Citadine</option>
-          <option value="berline">Berline</option>
-          <option value="break">Break</option>
-          <option value="suv">SUV</option>
-          <option value="monospace">Monospace</option>
-        </select>
-      </div>
-      <button type="submit" class="btn-submit">On roule !</button>
-    </form>
-  </div>
+  <header class="header">
+    <div class="header-left">
+      <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
+    </div>
+  </header>
+  <main class="main-content">
+    <h1 class="welcome">
+      Bonjour, <span id="username"></span><span class="question">on part&nbsp;?</span>
+    </h1>
+    <div class="search-bar">
+      <span class="search-label">On part depuis</span>
+      <input 
+        type="text" 
+        placeholder="Ex : l'IUT, la gare..." 
+        class="search-input"
+      />
+      <button class="search-button">GO!</button>
+    </div>
+    <section class="trip-list">
+      <article class="trip-card">
+        <div class="trip-card-header">
+          <span class="trip-destination">FCSM</span>
+          <button class="join-btn">Rejoindre</button>
+        </div>
+        <div class="trip-card-body">
+          <p>19:30<br>07/04/2025<br>départ depuis l'IUT</p>
+        </div>
+        <div class="trip-card-footer">
+          <p>6 places dispo | 15€ | IUT - Parking P20</p>
+        </div>
+      </article>
+      <article class="trip-card">
+        <div class="trip-card-header">
+          <span class="trip-destination">FCSM</span>
+          <button class="join-btn">Rejoindre</button>
+        </div>
+        <div class="trip-card-body">
+          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
+        </div>
+        <div class="trip-card-footer">
+          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
+        </div>
+      </article>
+      <article class="trip-card">
+        <div class="trip-card-header">
+          <span class="trip-destination">FCSM</span>
+          <button class="join-btn">Rejoindre</button>
+        </div>
+        <div class="trip-card-body">
+          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
+        </div>
+        <div class="trip-card-footer">
+          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
+        </div>
+      </article>
+      <article class="trip-card">
+        <div class="trip-card-header">
+          <span class="trip-destination">FCSM</span>
+          <button class="join-btn">Rejoindre</button>
+        </div>
+        <div class="trip-card-body">
+          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
+        </div>
+        <div class="trip-card-footer">
+          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
+        </div>
+      </article>
+      <article class="trip-card">
+        <div class="trip-card-header">
+          <span class="trip-destination">FCSM</span>
+          <button class="join-btn">Rejoindre</button>
+        </div>
+        <div class="trip-card-body">
+          <p>19:30<br>07/04/2025<br>départ depuis Stellantisse</p>
+        </div>
+        <div class="trip-card-footer">
+          <p>1 places dispo | 15€ | Stellantisse - Parking P19</p>
+        </div>
+      </article> 
+    </section>
+  </main>
 </body>
 <style>
 * {
@@ -64,101 +99,149 @@
   box-sizing: border-box;
 }
 
-/* Style global */
 body {
-  background-color: #2c2c2c;          /* Fond sombre */
-  font-family: 'Itim', cursive;      /* Police Google Fonts */
-  color: #ffffff;                    /* Couleur du texte */
+  background-color: #2C2C2C;
+  font-family: 'Itim', cursive;
+  color: #ffffff;
 }
 
-/* Conteneur principal */
-.car-info-container {
-  display: flex;
-  flex-direction: column;
+.header {
+  width: 180px;
+  position: sticky;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 90%;
-  max-width: 500px;
+  background-color: #2c2c2c1e;
+  top: 0px;
+  backdrop-filter: blur(20px);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 20px;
+  width: 150px;
+  object-fit: contain;
+  
+}
+.header-right .menu-btn {
+  background-color: #3D3D3D;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.main-content {
+  padding: 1rem;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Logo */
-.logo {
-  max-width: 220px;
+.welcome {
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
-/* Titre */
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
+.question {
+  color: #ff9e7a;
+  font-weight: normal;
 }
 
-/* Formulaire */
-.car-info-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem; /* Espace vertical entre les lignes */
-  width: 100%;
-}
-
-/* Chaque ligne (texte + select) */
-.form-line {
+.search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;    /* Permet un retour à la ligne si l’écran est étroit */
-  gap: 0.5rem;        /* Espace horizontal entre éléments */
-  font-size: 1.2rem;  /* Taille du texte */
+  gap: 0.5rem;
+  background-color: #3D3D3D; 
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-/* Petits morceaux de texte sur la même ligne */
-.inline-text {
-  white-space: nowrap; /* Pour éviter les retours à la ligne au milieu */
-}
-
-/* Sélecteurs (listes déroulantes) */
-.form-line select {
-  border: none;
-  border-radius: 5px;
-  background-color: #3d3d3d;   /* Fond gris */
+.search-label {
+  white-space: nowrap;
   color: #ffffff;
-  padding: 0.6rem 1rem;
   font-size: 1rem;
-  cursor: pointer;
-
-  /* Barre colorée en bas */
-  border-bottom: 5px solid #f1a6a6;
-
-  /* Supprime la flèche native */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-/* Retire la flèche sur IE/Edge */
-.form-line select::-ms-expand {
-  display: none;
-}
-
-/* Bouton de validation */
-.btn-submit {
-  padding: 0.75rem 1.5rem;
+.search-input {
   border: none;
-  border-radius: 5px;
-  background-color: #f1a6a6; /* Couleur du bouton */
-  color: #2c2c2c;
+  border-bottom: 3px solid #ff9e7a;
+  background-color: #2C2C2C;
+  color: #ffffff;
   font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.search-button {
+  background-color: #ff9e7a;
+  color: #2C2C2C;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.btn-submit:hover {
-  background-color: #e08888;
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trip-card {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  color: #2C2C2C;
+  overflow: hidden; 
+}
+
+.trip-card-header {
+  background-color: #ff9e7a; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.trip-destination {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.join-btn {
+  background-color: #3D3D3D;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.trip-card-body {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.trip-card-footer {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #333333;
 }
 
 </style>
