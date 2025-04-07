@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BLABLATAC Covoiturage</title>
+
+  <!-- Import de la police Itim -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="../styles/style.css" rel="stylesheet">
+
+  <style>
+    /* ----------------------------
+       1) RÉINITIALISATION & FOND
+       ---------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Itim", cursive;    /* Police importée */
+      background-color: #2c2c2c;       /* Couleur de fond principale */
+      color: #ffffff;                  /* Couleur du texte par défaut */
+    }
+
+    /* ----------------------------
+       2) CONTENEUR GÉNÉRAL & TITRES
+       ---------------------------- */
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      color: #ff9e7a; /* Exemple de couleur */
+    }
+
+    .sous-titre-logo {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #b3b3b3;
+    }
+
+    .sous-titre-form {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    /* ----------------------------
+       3) FORMULAIRE
+       ---------------------------- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form-line label {
+      font-size: 1rem;
+      margin-right: 1rem;
+      white-space: nowrap;  /* Évite le saut de ligne sur le label */
+      /* Couleur d’exemple */
+      color: #ff9e7a; /* Varie au besoin, ex : var(--rose-peche) si vous avez défini cette variable */
+    }
+
+    .form-line select,
+    .form-line input[type="text"] {
+      flex: 1;
+      border: none;
+      border-radius: 5px;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      background-color: #3d3d3d;  
+      color: #ffffff; 
+      border-bottom: 5px solid #ff9e7a; 
+      outline: none; 
+    }
+
+    .form-line select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .form-line select::-ms-expand {
+      display: none;
+    }
+
+    .form-line input::placeholder {
+      color: #cccccc;
+    }
+
+    button[type="submit"] {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff9e7a; 
+      color: #2c2c2c;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+      align-self: flex-start; 
+    }
+    button[type="submit"]:hover {
+      background-color: #e08888;
+    }
+  </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="../assets/img/tac_sansbg.png" alt="logo_blablatac">
+    <div class="sous-titre-form">A propos de vous...</div>
+
+    <form>
+      <div class="form-line">
+        <label for="transport">Je me déplace avec</label>
+        <select id="transport" name="transport">
+          <option value="">Sélectionnez...</option>
+          <option value="velo">Vélo</option>
+          <option value="voiture">Voiture</option>
+          <option value="transports_publics">Transports publics</option>
+          <option value="marche">À pied</option>
+        </select>
+      </div>
+      <div class="form-line">
+        <label for="adresse">Mon adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse">
+      </div>
+
+      <button type="submit">On roule !</button>
+    </form>
+  </div>
+
+</body>
+</html>
