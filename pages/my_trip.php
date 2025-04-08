@@ -19,10 +19,10 @@
     <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
     <button class="btn-close" onclick="toggleMenu()">Quitter</button>
     <ul>
-        <li><a href="my_trip.html">Voir les trajets</a></li>
-        <li><a href="header.html">Mes trajets</a></li>
-        <li><a href="../traitement/T_logout.php">Déconnexion</a></li>
-      </ul>
+      <li><a href="my_trip.php">Mes trajets</a></li>
+      <li><a href="auto.php">Les trajets</a></li>
+      <li><a href="../traitement/T_logout.php">Déconnexion</a></li>
+    </ul>
   </nav>
   <main>
     <h2 class="trajets-title"><span>voici vos trajets</span></h2>
@@ -64,65 +64,60 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: sticky;
-  top: 10px;
-}
-
-.logo {
-  width: 150px;
-}
-
-.btn-menu,
-.btn-close {
-  padding: 6px 20px;
-  border: none;
-  background-color: #ff9e7a;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2C2C2C;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 999;
-}
-
-.menu ul {
-  list-style: none;
-  text-align: center;
-}
-
-.menu ul li {
-  margin: 15px 0;
-}
-
-.menu ul li a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: all 50ms;
-  border-bottom: 0px solid #ff9e7a;
-}
-
-.menu ul li a:hover {
-  color: #ff9e7a;
-  border-bottom: 2px solid #ff9e7a;
-}
-
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.5rem 1rem;
+      background-color: #2c2c2c1e;
+      backdrop-filter: blur(20px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    .logo {
+      width: 100px;
+    }
+    .btn-menu, .btn-close {
+      padding: 6px 12px;
+      border: none;
+      background-color: #ff9e7a;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2C2C2C;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      z-index: 999;
+    }
+    .menu ul {
+      list-style: none;
+      text-align: center;
+    }
+    .menu ul li {
+      margin: 15px 0;
+    }
+    .menu ul li a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: all 50ms;
+      border-bottom: 0px solid #ff9e7a;
+    }
+    .menu ul li a:hover {
+      color: #ff9e7a;
+      border-bottom: 2px solid #ff9e7a;
+    }
 .trajets-title {
   text-align: center;
   font-size: 2rem;
@@ -226,11 +221,19 @@ body {
   opacity: 0.8;
 }
 
+.trip-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
 .trip-card {
   background-color: #d9d9d9;
   border-radius: 15px;
   overflow: hidden;
   color: #2c2c2c;
+  width: 50%;
   margin-bottom: 1rem;
   font-family: 'Itim', cursive;
 }
