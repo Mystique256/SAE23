@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Blablatac - Vos trajets</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/tac_petit_abg.png" type="image/x-icon">
 </head>
 <body>
   <header class="header">
@@ -242,7 +242,11 @@ main{
   margin-bottom: 1rem;
   font-family: 'Itim', cursive;
 }
-
+@media (min-width: 600px) {
+      .trip-card {
+        max-width: 100%;
+      }
+    }
 .trip-card-header {
   background-color: #ff9e7a;
   display: flex;

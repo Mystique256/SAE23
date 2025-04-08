@@ -128,9 +128,8 @@ if (!isset($_SESSION['email'])) {
       color: #ff9e7a;
       border-bottom: 2px solid #ff9e7a;
     }
-    /* Contenu principal */
     .main-content {
-      padding: 200px 1rem 1rem; /* Espace en haut pour le header fixe */
+      padding: 200px 1rem 1rem;
       margin: 0 auto;
       text-align: center;
     }

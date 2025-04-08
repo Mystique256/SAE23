@@ -8,15 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../assets/img/tac_petit_abg.png" type="image/x-icon">
 </head>
 <body>
   <div class="login-container">
-    <!-- Logo / Titre principal -->
    <img src="../assets/img/tac_sansbg.png" alt="">
-    <!-- Titre de la section -->
     <h2>Connectez-vous !</h2>
-
-    <!-- Formulaire de connexion -->
     <form action="../traitement/T_login.php" method="post" class="login-form">
       <div class="form-group">
         <label for="email">E-mail</label>
