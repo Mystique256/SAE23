@@ -16,11 +16,20 @@ if (!isset($_SESSION['email'])) {
   <link rel="shortcut icon" href="../assets/img/tac_petit_abg.png" type="image/x-icon">
 </head>
 <body>
-  <header class="header">
-    <div class="header-left">
-      <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
-    </div>
+<header class="header">
+    <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
+    <button class="btn-menu" onclick="toggleMenu()">Menu</button>
   </header>
+
+  <nav class="menu" id="menu">
+    <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
+    <button class="btn-close" onclick="toggleMenu()">Quitter</button>
+    <ul>
+      <li><a href="my_trip.html">Mes trajets</a></li>
+      <li><a href="header.html">Accueil</a></li>
+      <li><a href="">Mon compte</a></li>
+    </ul>
+  </nav>
   <main class="main-content">
     <h1 class="welcome">
       Bonjour, <span id="username"></span><span class="question">on part&nbsp;?</span>
@@ -36,9 +45,15 @@ if (!isset($_SESSION['email'])) {
       <button class="search-button">GO!</button>
       </div>
     <section class="trip-list">
-      <?php include '../traitement/A_Event.php' ?> <!-- Inclusion du fichier A_Event.php -->
+      <?php include '../traitement/A_Event.php' ?>
     </section>
   </main>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+  </script>
 </body>
 <style>
 * {
@@ -66,6 +81,53 @@ body {
 .header-left {
   display: flex;
   align-items: center;
+}
+
+.btn-menu,
+.btn-close {
+  padding: 6px 20px;
+  border: none;
+  background-color: #ff9e7a;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2C2C2C;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+}
+
+.menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menu ul li {
+  margin: 15px 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 50ms;
+  border-bottom: 0px solid #ff9e7a;
+}
+
+.menu ul li a:hover {
+  color: #ff9e7a;
+  border-bottom: 2px solid #ff9e7a;
 }
 
 .logo {
