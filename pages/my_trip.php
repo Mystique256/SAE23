@@ -244,7 +244,7 @@ main{
 }
 @media (min-width: 600px) {
       .trip-card {
-        max-width: 100%;
+        width: 100%;
       }
     }
 .trip-card-header {
