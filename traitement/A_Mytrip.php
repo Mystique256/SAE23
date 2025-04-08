@@ -20,9 +20,9 @@ while ($trip = $stmt->fetch_assoc()) {
     
     echo '  <div class="trip-card-footer">';
     echo '    <p>' . htmlspecialchars($trip['price']) . '€ | ' . htmlspecialchars($trip['location']) . '</p>';
-    echo '    <a href="../traitement/A_Equipe.php?id=' . $id . '" class="crew-btn">Voir l’équipage</a>';
+    echo '    <a href="../equipage.php?id=' . $id . '" class="crew-btn">Voir l’équipage</a>';
     echo '  </div>';
-
+    
     echo '</article>';
 }
 ?>
