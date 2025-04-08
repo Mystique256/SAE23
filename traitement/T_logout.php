@@ -1,4 +1,5 @@
 <?php
+session_start();
 session_destroy();
-header("../pages/auto.php");
+header('Location: ../pages/login.php');
 ?>

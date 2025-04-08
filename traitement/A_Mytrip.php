@@ -1,6 +1,5 @@
 <?php
 require_once 'C_config.php';
-session_start();
 
 $email = $_SESSION['email'];
 $stmt = $conn->query("SELECT `Trajet`.*, `equipage`.`nom` FROM `Trajet`, `equipage` WHERE `Trajet`.`id` = `equipage`.`id` AND `equipage`.`nom` = '$email';");
