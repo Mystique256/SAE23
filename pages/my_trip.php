@@ -234,15 +234,24 @@ main{
     align-items: center;
 }
 .trip-card {
-  background-color: #d9d9d9;
-  border-radius: 15px;
-  overflow: hidden;
-  color: #2c2c2c;
-  width: 50%;
-  margin-bottom: 1rem;
-  font-family: 'Itim', cursive;
-}
-@media (min-width: 600px) {
+      background-color: #d9d9d9;
+      border-radius: 15px;
+      overflow: hidden;
+      color: #2c2c2c;
+      width: 50%;
+      margin: 1rem auto;
+      font-family: 'Itim', cursive;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 1rem;
+    }
+
+    .trip-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (min-width: 600px) {
       .trip-card {
         width: 100%;
       }
