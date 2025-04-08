@@ -31,7 +31,7 @@ if (!isset($_SESSION['email'])) {
     </ul>
   </nav>
   <main>
-    <h2 class="crew-title">Andréa, <span>voici votre équipage pour le trajet </span>iut - héricourt </h2>
+    <h2 class="crew-title"><span>voici votre équipage pour le trajet </span>
     <section class="crew">
       <?php include '../traitement/A_Equipe.php' ?>
     </section>
@@ -43,6 +43,7 @@ function toggleMenu() {
 }
   </script>
 </body>
+
 <style>
 
     * {
