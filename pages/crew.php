@@ -27,22 +27,7 @@
   <main>
     <h2 class="crew-title">Andréa, <span>voici votre équipage pour le trajet </span>iut - héricourt </h2>
     <section class="crew">
-        <div class="crew-member">
-            <img src="../assets/img/user.png" alt="utilisateur" style="width: 100px;">
-            <h1>Conducteur - John</h1>
-        </div>
-        <div class="crew-member">
-            <img src="../assets/img/user.png" alt="utilisateur" style="width: 100px;">
-            <h1>Matthias</h1>
-        </div>
-        <div class="crew-member">
-            <img src="../assets/img/user.png" alt="utilisateur" style="width: 100px;">
-            <h1>Andréa</h1> 
-        </div>
-        <div class="crew-member">
-            <img src="../assets/img/user.png" alt="utilisateur" style="width: 100px;">
-            <h1>Mathéo</h1>
-        </div>
+      <?php include '../traitement/A_Equipe.php' ?>
     </section>
   </main>
   <script>
