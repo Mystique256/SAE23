@@ -226,5 +226,60 @@ body {
   opacity: 0.8;
 }
 
+.trip-card {
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+  font-family: 'Itim', cursive;
+}
+
+.trip-card-header {
+  background-color: #ff9e7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.quit-btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.trip-card-body {
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.trip-card-footer {
+  background-color: #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.crew-btn {
+  background-color: #ff9e7a;
+  color: #2c2c2c;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
 </style>
 </html>
