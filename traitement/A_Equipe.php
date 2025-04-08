@@ -44,7 +44,7 @@ while ($row = $result->fetch_assoc()) {
                 <img src="../assets/img/user.png" alt="utilisateur" class="user-avatar">
                 <p class="crew-name">
                     <?php 
-                    echo htmlspecialchars($member['prenom'] . ' ' . $member['nom'], ENT_QUOTES, 'UTF-8'); 
+                    echo htmlspecialchars($member['nom'], ENT_QUOTES, 'UTF-8'); 
                     if (!empty($member['role'])) {
                         echo ' - ' . htmlspecialchars($member['role'], ENT_QUOTES, 'UTF-8');
                     }
