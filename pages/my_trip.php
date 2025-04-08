@@ -248,13 +248,7 @@ main{
       margin: 1rem auto;
       font-family: 'Itim', cursive;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       padding: 1rem;
-    }
-
-    .trip-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
 
     @media (min-width: 600px) {

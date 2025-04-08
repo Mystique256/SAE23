@@ -17,6 +17,6 @@ if ($password != $confirm_password) {
     $sql = "INSERT INTO user (nom, AdresseMail, password, Adresse) VALUES ('$nom', '$email', '$password', '$add' )";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    header('Location: ../pages/login.html');
+    header('Location: ../pages/login.php');
     exit;
 }
