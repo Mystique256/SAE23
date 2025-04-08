@@ -25,34 +25,9 @@
       </ul>
   </nav>
   <main>
-    <h2 class="trajets-title">Andréa, <span>voici vos trajets</span></h2>
-    <section class="trajets-container">
-      <div class="trajet-card">
-        <div class="trajet-header">
-          <span>Stade de Sochaux</span>
-          <button class="quit-btn">Quitter l'évènement</button>
-        </div>
-        <div class="trajet-body">
-          <p>14:00:00<br>2025-04-06<br>Départ depuis l'IUT</p>
-          <div class="trajet-footer">
-            <span>5.00€ | Boulogne-Billancourt</span>
-            <a href="crew.html" class="crew-btn">Voir l'équipage</a>
-          </div>
-        </div>
-      </div>
-      <div class="trajet-card">
-        <div class="trajet-header">
-          <span>Stade de Sochaux</span>
-          <button class="quit-btn">Quitter l'évènement</button>
-        </div>
-        <div class="trajet-body">
-          <p>14:00:00<br>2025-04-06<br>Départ depuis l'IUT</p>
-          <div class="trajet-footer">
-            <span>5.00€ | Boulogne-Billancourt</span>
-            <a href="crew.html" class="crew-btn">Voir l'équipage</a>
-          </div>
-        </div>
-      </div>
+    <h2 class="trajets-title"><span>voici vos trajets</span></h2>
+    <section class="trip-list">
+      <?php include '../traitement/A_Mytrip.php' ?>
     </section>
     <section class="event-form-container">
         <h3>Créer un nouvel évènement</h3>
