@@ -26,8 +26,8 @@ if (!isset($_SESSION['email'])) {
     <img src="../assets/img/tac_sansbg.png" alt="Logo Blablatac" class="logo">
     <button class="btn-close" onclick="toggleMenu()">Quitter</button>
     <ul>
-      <li><a href="my_trip.html">Voir les trajets</a></li>
-      <li><a href="header.html">Mes trajets</a></li>
+      <li><a href="my_trip.php">Mes trajets</a></li>
+      <li><a href="auto.php">Les trajets</a></li>
       <li><a href="../traitement/T_logout.php">Déconnexion</a></li>
     </ul>
   </nav>
@@ -64,6 +64,7 @@ if (!isset($_SESSION['email'])) {
     }
     a {
       text-decoration: none;
+      color: white;
     }
     body {
       background-color: #2C2C2C;
