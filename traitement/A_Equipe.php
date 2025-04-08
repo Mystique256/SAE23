@@ -5,7 +5,7 @@ if ($id === false) {
     die("ID invalide !");
 }
 
-$stmt = $conn->prepare("SELECT nom, prenom, role FROM equipage WHERE trip_id = ?");
+$stmt = $conn->prepare("SELECT nom, role FROM equipage WHERE trip_id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();

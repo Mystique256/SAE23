@@ -1,5 +1,6 @@
 <?php
 require_once 'C_config.php';
+session_start();
 
 $email = $_SESSION['email'];
 $stmt = $conn->query("SELECT `Trajet`.*, `equipage`.`nom` FROM `Trajet`, `equipage` WHERE `Trajet`.`id` = `equipage`.`id` AND `equipage`.`nom` = '$email';");
@@ -19,9 +20,9 @@ while ($trip = $stmt->fetch_assoc()) {
     
     echo '  <div class="trip-card-footer">';
     echo '    <p>' . htmlspecialchars($trip['price']) . '€ | ' . htmlspecialchars($trip['location']) . '</p>';
-    echo '    <a href="../equipage.php?id=' . $id . '" class="crew-btn">Voir l’équipage</a>';
+    echo '    <a href="/traitement/A_Equipe.php?id=' . $id . '" class="crew-btn">Voir l’équipage</a>';
     echo '  </div>';
-    
+
     echo '</article>';
 }
 ?>
