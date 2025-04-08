@@ -12,7 +12,6 @@ if(isset($_POST['submit'])) {
     if($info > 0) {
       $_SESSION['email'] = $email;
       $_SESSION['password'] = $password;
-      $_SESSION['nom'] = $infoS->fetch()['nom'];
       header("Location: ../pages/auto.php");
       echo "Vous êtes connecté";
     } else {
