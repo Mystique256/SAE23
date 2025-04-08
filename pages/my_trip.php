@@ -63,6 +63,11 @@ body {
   color: #fff;
 }
 
+main{
+  padding: 200px 1rem 1rem; /* Espace en haut pour le header fixe */
+  margin: 0 auto;
+  text-align: center;
+}
 .header {
       width: 100%;
       position: fixed;

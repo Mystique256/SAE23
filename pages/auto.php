@@ -130,7 +130,7 @@ if (!isset($_SESSION['email'])) {
     }
     /* Contenu principal */
     .main-content {
-      padding: 70px 1rem 1rem; /* Espace en haut pour le header fixe */
+      padding: 200px 1rem 1rem; /* Espace en haut pour le header fixe */
       margin: 0 auto;
       text-align: center;
     }
